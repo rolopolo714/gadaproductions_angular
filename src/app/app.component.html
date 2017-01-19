@@ -1,3 +1,56 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id="menu" class="nav navbar-nav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <!-- <li class="active"><a href="/home">home <span class="sr-only">(current)</span></a></li> -->
+        <li class="list" (click)="onSelected(1)" [ngClass]="{'my-class': selected === 1 }"><a routerLink="/home">home</a></li>
+        <li class="list" (click)="onSelected(2)" [ngClass]="{'my-class': selected === 2 }"><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="list" (click)="onSelected(3)" [ngClass]="{'my-class': selected === 3 }"><a routerLink="/team" routerLinkActive="active">Team</a></li>
+        <li class="list" (click)="onSelected(4)" [ngClass]="{'my-class': selected === 4 }"><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav">
+      <li role="separator" class="divider"></li>
+        <li class="dropdown list">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">work<span class="caret"></span></a>
+          <ul class="dropdown-menu portfolio" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <li class="list" (click)="onSelected(6)" [ngClass]="{'my-class': selected === 6 }"><a routerLink="/food-photography">Food Photography</a></li>
+            <li class="list" (click)="onSelected(7)" [ngClass]="{'my-class': selected === 7 }"><a routerLink="/real-estate-photography" routerLinkActive="active">Real Estate Photography</a></li>
+            <li class="list" (click)="onSelected(8)" [ngClass]="{'my-class': selected === 8 }"><a routerLink="/videos" routerLinkActive="active">Business Marketing Videos</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li role="separator" class="divider"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">work<span class="caret"></span></a>
+            <ul class="dropdown-menu portfolio" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <li><a href="https://www.facebook.com/TheWeddingCentral/"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.behance.net/gadaproductions"><i class="fa fa-behance"></i></a></li>
+              <li><a href="https://vimeo.com/channels/smallbusinesspromovideos"><i class="fa fa-vimeo"></i></a></li>
+              <li><a href="https://twitter.com/gadaproductions"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="router">
+
+</div>
+
+<router-outlet></router-outlet>

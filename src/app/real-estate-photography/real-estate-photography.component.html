@@ -1,0 +1,13 @@
+
+<div class="row-med">
+    <div *ngFor="let realestate of realestate | async" class="col-xs-12 col-md-3 half displaycontent">
+        <img class="imgsq" src="{{realestate.url}}" alt="">
+        <div class="boxcontent">
+            <div class="centercontent">
+              <h4>{{realestate.title}}</h4>
+              <p>{{realestate.description}}</p>
+              <h4><a class="portfolio-btn wbtn" routerLink="{{realestate.link}}">VIEW WORK</a></h4>
+            </div>
+        </div>
+    </div>
+</div>

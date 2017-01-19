@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-}
+
+  selected: number;
+
+    constructor() {
+    }
+
+    onSelected(newValue: number) {
+      if (this.selected === newValue) {
+        this.selected = 0;
+      }
+      else {
+        this.selected = newValue;
+      }
+    }
+
+
+
+  }

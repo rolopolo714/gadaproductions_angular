@@ -1,0 +1,6 @@
+<div *ngIf="video">
+  <h2>{{video.name}}</h2>
+  <div [innerHtml] = "video.embed.html | safeHtml"></div><br>
+  <p style="white-space:pre-wrap">{{video.description}}</p>
+
+</div>
