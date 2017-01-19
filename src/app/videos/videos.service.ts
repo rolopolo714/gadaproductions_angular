@@ -10,7 +10,7 @@ export class VideosService {
 
   constructor(private http: Http) { }
 
-private url = 'https://api.vimeo.com/channels/1021571/videos?access_token=59805ff25da4a096e79f48b769f1e609&sort=manual'
+private url = 'XXXX'
 
   getVideos(){
     return this.http.get(this.url).map(res => res.json().data)
