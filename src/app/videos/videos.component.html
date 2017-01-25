@@ -1,10 +1,10 @@
 
-<div *ngFor="let item of lenght; let i = index">
-  <div *ngFor="let video of videos">
+  <div *ngFor="let video of videos | paginate: { itemsPerPage: 8, currentPage: p }">
     <div class="col-xs-12 col-md-3 centercontent">
-      <h6 id="h6vim">{{video[i].name}}</h6>
-      <img id="vimimg" [src]="video[i].pictures.sizes[2].link | safeUrl">
-      <a routerLink="/video/{{video[i].resource_key}}">View</a>
+      <h6 id="h6vim">{{video.name}}</h6>
+      <img id="vimimg" [src]="video.pictures.sizes[2].link | safeUrl">
+      <a routerLink="/video/{{video.resource_key}}">View</a>
   </div>
 </div>
-</div>
+
+<pagination-controls  (pageChange)="p = $event"></pagination-controls>

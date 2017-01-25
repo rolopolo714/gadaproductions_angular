@@ -2,6 +2,8 @@ import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { VideosService} from './videos.service';
 import { DomSanitizer, SafeResourceUrl, SafeUrl, SafeHtml, } from '@angular/platform-browser';
 
+
+
 @Pipe({ name: 'safeHtml'})
 export class SafeHtmlPipe implements PipeTransform  {
   constructor(private sanitized: DomSanitizer) {}
@@ -24,14 +26,11 @@ export class SafeUrlPipe implements PipeTransform  {
 })
 export class VideosComponent implements OnInit {
   videos
-  medium = ''
-  lenght = Array(25);
 
-  constructor(private _videosService: VideosService, private sanitizer: DomSanitizer) {
-  }
+  constructor(private _videosService: VideosService, private sanitizer: DomSanitizer) {}
 
   getVideos(){
-    this._videosService.getVideos().toArray().subscribe(videos => this.videos = videos);
+    this._videosService.getVideos().subscribe(videos => this.videos = videos);
   }
 
   ngOnInit() {

@@ -317,3 +317,13 @@ padding-right: 5%
 #esto {
 display: none
 }
+
+.ng2-pagination{
+  cursor: pointer;
+}
+.ng2-pagination li {
+
+  margin: 1%;
+  font-size: 20px;
+  align-items: center;
+}

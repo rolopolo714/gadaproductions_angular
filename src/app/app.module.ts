@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule} from '@angular/http';
 import { RouterModule } from '@angular/router';
+import {Ng2PaginationModule, PaginatePipe} from 'ng2-pagination';
 import { AlertModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { VideosComponent } from './videos/videos.component';
@@ -24,8 +26,6 @@ import { SafeUrlPipe } from './videos/videos.component';
 import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
 import { RealEstatePhotographyDetailComponent } from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +44,8 @@ import { RealEstatePhotographyDetailComponent } from './real-estate-photography/
     VideoDetailComponent,
     RealEstatePhotographyDetailComponent,
 
+
+
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import { RealEstatePhotographyDetailComponent } from './real-estate-photography/
     HttpModule,
     AlertModule,
     AppRoutingModule,
+    Ng2PaginationModule,
     AngularFireModule.initializeApp(FireBaseConfig),
   ],
   providers: [],
