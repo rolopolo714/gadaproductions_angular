@@ -1,0 +1,5 @@
+<div *ngIf="realEstate" >
+  <div class='col-xs-12 col-md-12' *ngFor="let item of photos, let i = index">
+    <img class='full-img' src="{{realEstate.detail}}{{i+1}}.jpg" alt="">
+  </div>
+</div>

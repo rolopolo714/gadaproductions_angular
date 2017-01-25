@@ -14,17 +14,16 @@ import { ContactComponent } from './contact/contact.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InstagramComponent } from './instagram/instagram.component';
-import {InstagramService} from './instagram/instagram.service';
+// import {InstagramService} from './instagram/instagram.service';
 import * as spinner from 'ng2-spin-kit/app/spinners';
 import { AboutComponent } from './about/about.component';
 import {AngularFireModule} from 'angularfire2';
 import {FireBaseConfig} from '../environments/firebase.config';
-import { AldenParkComponent } from './real-estate-photography/alden-park/alden-park.component';
-import { ScotchbrookComponent } from './real-estate-photography/scotchbrook/scotchbrook.component';
-import { LafayetteAptsComponent } from './real-estate-photography/lafayette-apts/lafayette-apts.component';
 import { SafeHtmlPipe } from './videos/videos.component';
 import { SafeUrlPipe } from './videos/videos.component';
 import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
+import { RealEstatePhotographyDetailComponent } from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
+
 
 
 @NgModule({
@@ -40,12 +39,11 @@ import { VideoDetailComponent } from './videos/video-detail/video-detail.compone
     InstagramComponent,
     spinner.CircleComponent,
     AboutComponent,
-    AldenParkComponent,
-    ScotchbrookComponent,
-    LafayetteAptsComponent,
     SafeHtmlPipe,
     SafeUrlPipe,
-    VideoDetailComponent
+    VideoDetailComponent,
+    RealEstatePhotographyDetailComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@ export class VideosComponent implements OnInit {
   videos
   medium = ''
   lenght = Array(25);
+
   constructor(private _videosService: VideosService, private sanitizer: DomSanitizer) {
   }
 

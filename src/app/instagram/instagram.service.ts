@@ -14,7 +14,7 @@ export class InstagramService {
 
     getData(){
 
-      return this.http.get('https://api.instagram.com/v1/users/1340786566/media/recent?access_token=1340786566.1677ed0.b1fed6c8114c48c68eda18fa6cea09ed')
+      return this.http.get('https://api.instagram.com/v1/users/1340786566/media/recent?access_token=')
       .map(res => res.json());
     }
 
