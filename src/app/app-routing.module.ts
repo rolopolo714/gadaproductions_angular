@@ -14,6 +14,7 @@ import {VideosComponent} from './videos/videos.component';
 import {AnimationsComponent} from './animations/animations.component';
 
 import {VideoDetailComponent} from './videos/video-detail/video-detail.component'
+import {AnimationDetailComponent} from './animations/animation-detail/animation-detail.component'
 import {RealEstatePhotographyDetailComponent} from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'videos', component: VideosComponent},
   { path: 'video/:resource_key', component: VideoDetailComponent},
   { path: 'animations', component: AnimationsComponent},
+  { path: 'animation/:resource_key', component: AnimationDetailComponent},
   { path: 'instagram', component: InstagramComponent},
   { path: 'about', component: AboutComponent},
 

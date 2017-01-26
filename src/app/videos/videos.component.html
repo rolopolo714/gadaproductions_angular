@@ -1,10 +1,14 @@
+<div class="row-med">
+    <div *ngFor="let video of videos | paginate: { itemsPerPage: 8, currentPage: p }" class="col-xs-12 col-md-3 half displaycontent">
+        <img id="vimimg" [src]="video.pictures.sizes[2].link | safeUrl">
+        <div class="boxcontent_video">
+            <div class="centercontent">
+              <h6 id="h6vim">{{video.name}}</h6>
 
-  <div *ngFor="let video of videos | paginate: { itemsPerPage: 8, currentPage: p }">
-    <div class="col-xs-12 col-md-3 centercontent">
-      <h6 id="h6vim">{{video.name}}</h6>
-      <img id="vimimg" [src]="video.pictures.sizes[2].link | safeUrl">
-      <a routerLink="/video/{{video.resource_key}}">View</a>
-  </div>
+              <h4><a class="portfolio-btn wbtn" routerLink="/video/{{video.resource_key}}">VIEW WORK</a></h4>
+
+            </div>
+        </div>
+    </div>
 </div>
-
 <pagination-controls  (pageChange)="p = $event"></pagination-controls>

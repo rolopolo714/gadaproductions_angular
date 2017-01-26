@@ -1,0 +1,25 @@
+.displaycontent:hover .boxcontent_video {
+opacity: 1
+}
+
+.col-md-3,
+.col-md-2,
+.col-md-4,
+.col-md-6,
+.col-md-8,
+.col-md-9 {
+padding: 1%
+}
+
+.boxcontent_video {
+position: absolute;
+z-index: 1;
+top: 5%;
+text-align: center;
+background-color: rgba(000, 000, 000, .7);
+color: white;
+width: 98%;
+height: 74%;
+opacity: 0;
+transition: opacity .2s linear
+}

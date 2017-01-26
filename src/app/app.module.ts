@@ -25,6 +25,7 @@ import { SafeHtmlPipe } from './videos/videos.component';
 import { SafeUrlPipe } from './videos/videos.component';
 import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
 import { RealEstatePhotographyDetailComponent } from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
+import { AnimationDetailComponent } from './animations/animation-detail/animation-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { RealEstatePhotographyDetailComponent } from './real-estate-photography/
     SafeUrlPipe,
     VideoDetailComponent,
     RealEstatePhotographyDetailComponent,
+    AnimationDetailComponent,
 
 
 

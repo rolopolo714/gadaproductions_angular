@@ -253,7 +253,9 @@ border-bottom: 1px solid
 .inline-list li {
 display: inline;
 font-size: 40px;
-padding: 0 5%
+padding: 0 5%;
+float: left;
+
 }
 
 .fa {
@@ -270,12 +272,6 @@ width: 100%;
 height: 100%
 }
 
-iframe {
-width: 99%;
-height: 506px;
-margin-left: 3px
-}
-
 #main-footer {
 text-align: center
 }
@@ -283,7 +279,11 @@ text-align: center
 #vimimg {
 margin: 0 0 5% 0
 }
-
+iframe {
+width: 80%;
+height: 506px;
+margin-left: 3px
+}
 #h6vim {
 height: 30px;
 margin-bottom: 5%
