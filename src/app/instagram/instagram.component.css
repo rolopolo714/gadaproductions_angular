@@ -1,0 +1,25 @@
+.displaycontent:hover .box_instagram {
+opacity: 1;
+}
+
+.col-md-3,
+.col-md-2,
+.col-md-4,
+.col-md-6,
+.col-md-8,
+.col-md-9 {
+padding: 1%
+}
+
+.box_instagram {
+position: absolute;
+z-index: 1;
+top: 3%;
+text-align: center;
+background-color: rgba(000, 000, 000, .7);
+color: white;
+width: 320px;
+height: 320px;
+opacity: 0;
+transition: opacity .2s linear
+}

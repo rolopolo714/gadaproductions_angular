@@ -4,7 +4,6 @@ import {Observable} from 'rxjs/Observable';
 import {Video} from './video'
 import 'rxjs/add/operator/map';
 
-
 @Injectable()
 export class VideosService {
 

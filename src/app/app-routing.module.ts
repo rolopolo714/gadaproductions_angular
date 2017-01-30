@@ -16,7 +16,7 @@ import {AnimationsComponent} from './animations/animations.component';
 import {VideoDetailComponent} from './videos/video-detail/video-detail.component'
 import {AnimationDetailComponent} from './animations/animation-detail/animation-detail.component'
 import {RealEstatePhotographyDetailComponent} from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
-
+import {InstagramDetailComponent} from './instagram/instagram-detail/instagram-detail.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'animations', component: AnimationsComponent},
   { path: 'animation/:resource_key', component: AnimationDetailComponent},
   { path: 'instagram', component: InstagramComponent},
+  { path: 'instagram/:id', component: InstagramDetailComponent},
   { path: 'about', component: AboutComponent},
 
 ];

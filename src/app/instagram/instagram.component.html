@@ -1,3 +1,12 @@
-<p>
-  instagram works!
-</p>
+<div class="row-med">
+    <div *ngFor="let item of list | paginate: { itemsPerPage: 9, currentPage: p }" class="col-xs-12 col-md-4 displaycontent" style="height: 450px;">
+        <img [src]="item.images.low_resolution.url | safeUrl">
+        <div class="box_instagram">
+            <div style="margin: 40% 0 0 0">
+              <h4><a class="portfolio-btn wbtn" routerLink="{{item.id}}">VIEW ARTICLE</a></h4>
+
+            </div>
+        </div>
+    </div>
+</div>
+<pagination-controls  (pageChange)="p = $event"></pagination-controls>

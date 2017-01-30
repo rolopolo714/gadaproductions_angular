@@ -1,0 +1,9 @@
+<div class="row-lg inst_detail" *ngIf="data">
+  <img [src]="data.images.standard_resolution.url | safeUrl">
+  <p class="inst_p">{{data.caption.text}}</p>
+  <ul>
+    <li><h4><a class="portfolio-btn" href={{data.link}} target="_blank">Visit this article in instagram</a></h4></li>
+    <li><h4>|</h4></li>
+    <li><h4><a class="portfolio-btn" routerLink="/instagram">Back to list</a></h4></li>
+  </ul>
+</div>
