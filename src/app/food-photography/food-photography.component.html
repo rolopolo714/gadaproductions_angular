@@ -1,3 +1,12 @@
-<p>
-  food-photography works!
-</p>
+<div class="row-med">
+    <div *ngFor="let item of foodPhotography" class="col-xs-12 col-md-3 half displaycontent">
+        <img class="imgsq" src="{{item.url}}" alt="">
+        <div class="boxcontent">
+            <div class="centercontent">
+              <h4>{{item.title}}</h4>
+              <p>{{item.description}}</p>
+              <h4><a class="portfolio-btn wbtn" routerLink="{{item.title}}">VIEW WORK</a></h4>
+            </div>
+        </div>
+    </div>
+</div>

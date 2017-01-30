@@ -10,7 +10,7 @@
 /enviroments
 /app/instagram/instagram.service.ts
 /app/videos/video.service.ts
-
+/app/enviroments/firebase.config.ts
 
 # IDEs and editors
 /.idea

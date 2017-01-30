@@ -1,4 +1,4 @@
-<div class="row-med">
+<!-- <div class="row-med">
     <div *ngFor="let item of list | paginate: { itemsPerPage: 9, currentPage: p }" class="col-xs-12 col-md-4 displaycontent" style="height: 450px;">
         <img [src]="item.images.low_resolution.url | safeUrl">
         <div class="box_instagram">
@@ -9,4 +9,8 @@
         </div>
     </div>
 </div>
-<pagination-controls  (pageChange)="p = $event"></pagination-controls>
+<pagination-controls  (pageChange)="p = $event"></pagination-controls> -->
+
+<div *ngFor="let item of amazon">
+  {{amazon}}
+</div>

@@ -27,6 +27,7 @@ import { VideoDetailComponent } from './videos/video-detail/video-detail.compone
 import { RealEstatePhotographyDetailComponent } from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
 import { AnimationDetailComponent } from './animations/animation-detail/animation-detail.component';
 import { InstagramDetailComponent } from './instagram/instagram-detail/instagram-detail.component';
+import { FoodPhotographyDetailComponent } from './food-photography/food-photography-detail/food-photography-detail.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { InstagramDetailComponent } from './instagram/instagram-detail/instagram
     RealEstatePhotographyDetailComponent,
     AnimationDetailComponent,
     InstagramDetailComponent,
+    FoodPhotographyDetailComponent,
 
 
 

@@ -9,7 +9,6 @@ export class VideosService {
 
   constructor(private http: Http) { }
 
-
 private url = 'https://api.vimeo.com/channels/1021571/videos?access_token=&sort=manual&per_page=24'
 
   getVideos(){

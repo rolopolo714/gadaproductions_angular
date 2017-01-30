@@ -13,9 +13,10 @@ import {RealEstatePhotographyComponent} from './real-estate-photography/real-est
 import {VideosComponent} from './videos/videos.component';
 import {AnimationsComponent} from './animations/animations.component';
 
-import {VideoDetailComponent} from './videos/video-detail/video-detail.component'
-import {AnimationDetailComponent} from './animations/animation-detail/animation-detail.component'
+import {VideoDetailComponent} from './videos/video-detail/video-detail.component';
+import {AnimationDetailComponent} from './animations/animation-detail/animation-detail.component';
 import {RealEstatePhotographyDetailComponent} from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
+import {FoodPhotographyDetailComponent} from './food-photography/food-photography-detail/food-photography-detail.component'
 import {InstagramDetailComponent} from './instagram/instagram-detail/instagram-detail.component'
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'team', component: TeamComponent},
   { path: 'food-photography', component: FoodPhotographyComponent},
+  { path: 'food-photography/:title', component: FoodPhotographyDetailComponent},
   { path: 'real-estate-photography', component: RealEstatePhotographyComponent},
   { path: 'real-estate-photography/:title', component: RealEstatePhotographyDetailComponent},
   { path: 'videos', component: VideosComponent},

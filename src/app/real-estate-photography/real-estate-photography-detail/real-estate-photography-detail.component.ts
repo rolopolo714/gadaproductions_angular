@@ -1,6 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl, SafeHtml } from '@angular/platform-browser';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import { ActivatedRoute } from '@angular/router';
 import { RealEstatePhotography } from '../real-estate-photography';
 import { RealEstatePhotographyService } from '../real-estate-photography.service';
@@ -13,24 +12,17 @@ import { RealEstatePhotographyService } from '../real-estate-photography.service
 })
 export class RealEstatePhotographyDetailComponent implements OnInit {
 
-
 photos = Array(20)
-
-
 realEstate
 
-  constructor(private route: ActivatedRoute, private _realEstatePhotographyService: RealEstatePhotographyService, private sanitizer: DomSanitizer) {
-
-  }
+  constructor(private route: ActivatedRoute, private _realEstatePhotographyService: RealEstatePhotographyService, private sanitizer: DomSanitizer) {}
 
   ngOnInit(){
     this.route.params.subscribe(params => {
       let title = params['title'];
       let realEstate = this._realEstatePhotographyService.getItem(title).subscribe(realEstate => {
         this.realEstate = realEstate
-
       })
     });
-
   }
 }
