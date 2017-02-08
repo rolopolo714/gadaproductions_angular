@@ -10,10 +10,12 @@ import { RealEstatePhotographyService } from '../real-estate-photography.service
   styleUrls: ['./real-estate-photography-detail.component.css'],
   providers: [RealEstatePhotographyService],
 })
+
 export class RealEstatePhotographyDetailComponent implements OnInit {
 
-photos = Array(20)
-realEstate
+realEstate;
+
+photos
 
   constructor(private route: ActivatedRoute, private _realEstatePhotographyService: RealEstatePhotographyService, private sanitizer: DomSanitizer) {}
 
@@ -21,8 +23,9 @@ realEstate
     this.route.params.subscribe(params => {
       let title = params['title'];
       let realEstate = this._realEstatePhotographyService.getItem(title).subscribe(realEstate => {
-        this.realEstate = realEstate
-      })
+        this.realEstate = realEstate;
+        this.photos = Array(this.realEstate.amount)
+      });
     });
   }
 }

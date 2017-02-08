@@ -14,13 +14,15 @@ export class FoodPhotographyDetailComponent implements OnInit {
 
   constructor(private _foodPhotography: FoodPhotographyService, private sanitizer: DomSanitizer, private route: ActivatedRoute) { }
 
-  photos = Array(12);
+  photos;
   foodPhotography
 
   ngOnInit() {
     this.route.params.subscribe(params =>{
       let title = params['title'];
       let foodPhotography = this._foodPhotography.getItem(title).subscribe(foodPhotography => this.foodPhotography = foodPhotography)
+      this.photos = Array(this.foodPhotography.amount)
+
     });
   }
 

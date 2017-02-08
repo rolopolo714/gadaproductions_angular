@@ -12,10 +12,10 @@ export class RealEstatePhotographyService {
 
 private realEstate =  this.af.database.list('realestate');
 
-
   getItems(){
     return (this.realEstate);
   }
+
 
   getItem(title: RealEstatePhotography) : Observable<any>{
     return this.realEstate
@@ -31,5 +31,4 @@ private realEstate =  this.af.database.list('realestate');
       }
     });
   }
-
 }

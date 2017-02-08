@@ -8,7 +8,7 @@ export class InstagramService {
 
   constructor(private http: Http) {}
 
-private url = 'https://api.instagram.com/v1/users/1340786566/media/recent?access_token='
+private url = 'https://api.instagram.com/v1/users/1340786566/media/recent?access_token=XXX'
     getAllData(){
       return this.http.get(this.url).map(res => res.json().data);
     }

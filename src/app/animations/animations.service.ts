@@ -9,7 +9,7 @@ export class AnimationsService {
 
   constructor(private http: Http) { }
 
-  private url = "https://api.vimeo.com/channels/1054239/videos?access_token=&sort=manual"
+  private url = "https://api.vimeo.com/channels/1054239/videos?access_token=XXX&sort=manual"
 
   getVideos(){
     return this.http.get(this.url)

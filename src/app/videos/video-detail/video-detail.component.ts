@@ -15,10 +15,7 @@ export class VideoDetailComponent implements OnInit {
 
 video
 
-  constructor(private _videosService: VideosService, private sanitizer: DomSanitizer, private route: ActivatedRoute) {
-    // route.params.subscribe(params => {(params['resource_key']);
-    // });
-  }
+  constructor(private _videosService: VideosService, private sanitizer: DomSanitizer, private route: ActivatedRoute) {}
   ngOnInit() {
       this.route.params.subscribe(params =>{
         let resource_key = params['resource_key'];

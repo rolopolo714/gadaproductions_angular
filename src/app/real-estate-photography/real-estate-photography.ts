@@ -4,4 +4,5 @@ export class RealEstatePhotography{
   link: string;
   description: string;
   url: string;
+  folder: string;
 }
