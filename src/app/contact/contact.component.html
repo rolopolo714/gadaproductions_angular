@@ -1,31 +1,4 @@
 <div class="row row-med">
-  <div class="col-xs-12 col-md-3 full">
-    <div class="inborder">
-      <form action="http://mailthis.to/gadaproductions" method="post" id="contact_form">
-        <fieldset>
-          <div class="form-group">
-            <div class="input">
-              <input class="form" id="name" name="name" type="text" placeholder="Enter your full name here" >
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="input">
-              <input class="form" id="email" name="email" type="text" placeholder="Enter your email address here" >
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="input">
-              <textarea class="text" id="msg" name="msg" cols="6" rows="6" placeholder="tells us what you think." ></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <button id="submit" name="submit" class="btn btn-default" type="submit">send</button>
-          </div>
-          <input type="hidden" name="_confirmation" value="<b>Thank you!</b> We have received your message and will get back to you asap.">
-          </fieldset>
-        </form>
-    </div>
-  </div>
   <div class="col-xs-12 col-md-6 full">
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1505.7825226671162!2d-74.0468889610605!3d40.9910042037621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2e56ffdcfcff3%3A0xf73506820589f9d2!2s236+David+Hooper+Dr%2C+Westwood%2C+NJ+07675!5e0!3m2!1sen!2sus!4v1451457800938" width="100%" height="100%" frameborder="0" style="border:1px" allowfullscreen></iframe>
   </div>
@@ -44,6 +17,20 @@
         <h3>Westwood, NJ</h3>
         <p>236 David Hooper Pl</p>
       </div>
+    </div>
+  </div>
+</div>
+<div class="row row-lg">
+  <div class="col-xs-12 col-md-3 full">
+    <div class="inborder">
+      <form (submit)="addItem(name.value, phoneNumber.value)">
+        <label for="name">Enter Name</label>
+        <input type="text" #name>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" #phoneNumber>
+        <button type="submit" name="submit" (click)='redirect()'>Add</button>
+        <div class="g-recaptcha" data-sitekey="6LfVxxUUAAAAAKf3FeXVheXSrLbC5PW_9P0kSjG_"></div>
+      </form>
     </div>
   </div>
 </div>

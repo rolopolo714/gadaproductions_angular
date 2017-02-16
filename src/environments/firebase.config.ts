@@ -1,3 +1,3 @@
 export const FireBaseConfig = {
-
+  // XXX
 }

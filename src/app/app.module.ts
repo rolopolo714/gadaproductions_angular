@@ -49,9 +49,6 @@ import { FoodPhotographyDetailComponent } from './food-photography/food-photogra
     AnimationDetailComponent,
     InstagramDetailComponent,
     FoodPhotographyDetailComponent,
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -59,6 +56,7 @@ import { FoodPhotographyDetailComponent } from './food-photography/food-photogra
     HttpModule,
     AlertModule,
     AppRoutingModule,
+    // NgbModule,
     Ng2PaginationModule,
     AngularFireModule.initializeApp(FireBaseConfig),
   ],

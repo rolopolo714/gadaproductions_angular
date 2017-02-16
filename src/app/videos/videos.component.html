@@ -1,5 +1,5 @@
-<div class="row-med">
-    <div *ngFor="let video of videos | paginate: { itemsPerPage: 8, currentPage: p }" class="col-xs-12 col-md-3 half displaycontent">
+<div class="row-sml">
+    <div *ngFor="let video of videos | paginate: { itemsPerPage: 4, currentPage: p }" class="col-xs-12 col-md-3 half displaycontent">
         <img id="vimimg" [src]="video.pictures.sizes[2].link | safeUrl">
         <div class="boxcontent_video">
             <div class="centercontent">
