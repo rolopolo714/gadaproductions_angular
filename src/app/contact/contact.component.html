@@ -20,17 +20,25 @@
     </div>
   </div>
 </div>
-<div class="row row-lg">
-  <div class="col-xs-12 col-md-3 full">
-    <div class="inborder">
-      <form (submit)="addItem(name.value, phoneNumber.value)">
-        <label for="name">Enter Name</label>
-        <input type="text" #name>
-        <label for="phoneNumber">Phone Number</label>
-        <input type="text" #phoneNumber>
-        <button type="submit" name="submit" (click)='redirect()'>Add</button>
-        <div class="g-recaptcha" data-sitekey=""></div>
-      </form>
+<div class="row row-med">
+  <div class="col-xs-12 col-md-9 full">
+    <div class="inborder contact">
+
+  <form [formGroup]="userForm" (submit)="addItem(name.value, email.value, profile.value)">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" #name/>
+    <control-messages [control]="userForm.controls.name"></control-messages>
+
+    <label for="email">Email</label>
+    <input formControlName="email" id="email" #email/>
+    <control-messages [control]="userForm.controls.email"></control-messages>
+
+    <label for="profile">Profile Description</label>
+    <textarea formControlName="profile" id="profile" #profile></textarea>
+    <control-messages [control]="userForm.controls.profile"></control-messages>
+
+    <button type="submit" [disabled]="!userForm.valid" (click)="redirect()">Submit</button>
+</form>
     </div>
   </div>
 </div>

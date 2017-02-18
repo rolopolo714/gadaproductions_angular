@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgModule, Pipe, PipeTransform } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule} from '@angular/http';
 import { RouterModule } from '@angular/router';
 import {Ng2PaginationModule, PaginatePipe} from 'ng2-pagination';
@@ -28,6 +28,11 @@ import { RealEstatePhotographyDetailComponent } from './real-estate-photography/
 import { AnimationDetailComponent } from './animations/animation-detail/animation-detail.component';
 import { InstagramDetailComponent } from './instagram/instagram-detail/instagram-detail.component';
 import { FoodPhotographyDetailComponent } from './food-photography/food-photography-detail/food-photography-detail.component';
+import { ControlMessagesComponent } from './contact/control-messages.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -49,16 +54,21 @@ import { FoodPhotographyDetailComponent } from './food-photography/food-photogra
     AnimationDetailComponent,
     InstagramDetailComponent,
     FoodPhotographyDetailComponent,
+    ControlMessagesComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AlertModule,
     AppRoutingModule,
     // NgbModule,
     Ng2PaginationModule,
     AngularFireModule.initializeApp(FireBaseConfig),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
