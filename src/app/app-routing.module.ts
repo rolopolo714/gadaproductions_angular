@@ -19,6 +19,7 @@ import {RealEstatePhotographyDetailComponent} from './real-estate-photography/re
 import {FoodPhotographyDetailComponent} from './food-photography/food-photography-detail/food-photography-detail.component'
 import {InstagramDetailComponent} from './instagram/instagram-detail/instagram-detail.component'
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule} from '@angular/http';
+import { HttpModule, JsonpModule} from '@angular/http';
 import { RouterModule } from '@angular/router';
 import {Ng2PaginationModule, PaginatePipe} from 'ng2-pagination';
 import { AlertModule } from 'ng2-bootstrap';
@@ -16,7 +16,6 @@ import { ContactComponent } from './contact/contact.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InstagramComponent } from './instagram/instagram.component';
-// import {InstagramService} from './instagram/instagram.service';
 import * as spinner from 'ng2-spin-kit/app/spinners';
 import { AboutComponent } from './about/about.component';
 import {AngularFireModule} from 'angularfire2';
@@ -29,6 +28,7 @@ import { AnimationDetailComponent } from './animations/animation-detail/animatio
 import { InstagramDetailComponent } from './instagram/instagram-detail/instagram-detail.component';
 import { FoodPhotographyDetailComponent } from './food-photography/food-photography-detail/food-photography-detail.component';
 import { ControlMessagesComponent } from './contact/control-messages.component';
+import { MyDatePickerModule } from 'mydatepicker';
 
 
 
@@ -56,6 +56,7 @@ import { ControlMessagesComponent } from './contact/control-messages.component';
     FoodPhotographyDetailComponent,
     ControlMessagesComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -66,7 +67,9 @@ import { ControlMessagesComponent } from './contact/control-messages.component';
     AppRoutingModule,
     // NgbModule,
     Ng2PaginationModule,
+    JsonpModule,
     AngularFireModule.initializeApp(FireBaseConfig),
+    MyDatePickerModule,
 
 
   ],

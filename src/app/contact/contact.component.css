@@ -11,6 +11,22 @@ margin-left: 3px
   margin: 2%;
 }
 form input{
-  width: 90%;
-  margin: 2%;
+  width: 100%;
+  margin-bottom: 1%;
+  border-radius: 3px;
+  height: 35px;
+}
+label{
+  width: 100%;
+}
+control-messages{
+  color: red;
+  height: 50px;
+  background: red;
+}
+.modal-content{
+  padding: 5%;
+}
+.submit{
+margin: 2% 0 0 90%;
 }

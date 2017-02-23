@@ -23,22 +23,47 @@
 <div class="row row-med">
   <div class="col-xs-12 col-md-9 full">
     <div class="inborder contact">
+      <form [formGroup]="userForm" (submit)="addItem(userForm.value)">
+        <label for="name">Name</label>
+        <input class="form-control" formControlName="name" id="name" placeholder="enter your name" #name/>
+        <!-- <control-messages [control]="userForm.controls.name"></control-messages> -->
+        <p *ngIf="userForm.controls.name.dirty && userForm.controls.name.invalid" class="ui error message">Name is required</p>
 
-  <form [formGroup]="userForm" (submit)="addItem(name.value, email.value, profile.value)">
-    <label for="name">Name</label>
-    <input formControlName="name" id="name" #name/>
-    <control-messages [control]="userForm.controls.name"></control-messages>
+        <label for="date">Date</label>
+        <my-date-picker formControlName="date" placeholder="enter the date of the event" #date></my-date-picker>
+        <!-- <input type="date" formControlName="date" #date> -->
+        <p *ngIf="userForm.controls.date.dirty && userForm.controls.name.invalid" class="ui error message">Date is required</p>
 
-    <label for="email">Email</label>
-    <input formControlName="email" id="email" #email/>
-    <control-messages [control]="userForm.controls.email"></control-messages>
+        <label for="email">Email</label>
+        <input class="form-control" formControlName="email" id="email" placeholder="enter your email" #email/>
+        <p *ngIf="userForm.controls.email.dirty && userForm.controls.email.invalid" class="ui error message">Invalid email format</p>
 
-    <label for="profile">Profile Description</label>
-    <textarea formControlName="profile" id="profile" #profile></textarea>
-    <control-messages [control]="userForm.controls.profile"></control-messages>
 
-    <button type="submit" [disabled]="!userForm.valid" (click)="redirect()">Submit</button>
-</form>
+        <label for="address">Address</label>
+        <input class="form-control" formControlName="address" id="address" placeholder="enter your address" #address/>
+        <p *ngIf="userForm.controls.address.dirty && userForm.controls.address.invalid" class="ui error message">address is required</p>
+
+        <label for="states">State</label>
+        <select class="form-control" formControlName="state" id="state" #state>
+          <option *ngFor="let item of states" [value]="item.abbreviation">
+            {{item.name}}
+          </option>
+        </select>
+        <control-messages [control]="userForm.controls.address"></control-messages>
+        <button type="submit" class="btn btn-primary submit" [disabled]="!userForm.valid" data-toggle="modal" data-target=".bs-example-modal-lg">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal fade bs-example-modal-lg" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <h2>THANK YOU FOR REQUEST</h2>
+        <p>Your request has been accepted. Somebody from Gada Productions will contact you</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" routerLink="/home">Close</button>
+        </div>
     </div>
   </div>
 </div>

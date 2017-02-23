@@ -326,3 +326,9 @@ display: none
 .ng2-pagination li a {
   text-decoration: none;
 }
+.error{
+  border: 1px solid red;
+  padding: 3%;
+  border-radius: 10px;
+  font-size: 14px;
+}

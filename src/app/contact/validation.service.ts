@@ -1,8 +1,8 @@
 export class ValidationService {
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
         let config = {
-            'required': 'Required',
-            'invalidCreditCard': 'Is invalid credit card number',
+            'required': 'This field is required',
+            'invalidCreditCard': 'The credit card number entered is invalid',
             'invalidEmailAddress': 'Invalid email address',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
             'minlength': `Minimum length ${validatorValue.requiredLength}`
@@ -28,6 +28,7 @@ export class ValidationService {
             return { 'invalidEmailAddress': true };
         }
     }
+
 
     static passwordValidator(control) {
         // {6,100}           - Assert password is between 6 and 100 characters
