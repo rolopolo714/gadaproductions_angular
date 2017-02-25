@@ -12,12 +12,17 @@ import {FoodPhotographyComponent} from './food-photography/food-photography.comp
 import {RealEstatePhotographyComponent} from './real-estate-photography/real-estate-photography.component';
 import {VideosComponent} from './videos/videos.component';
 import {AnimationsComponent} from './animations/animations.component';
+import {BlogComponent} from './blog/blog.component';
+import {AdminComponent} from './admin/admin.component';
 
 import {VideoDetailComponent} from './videos/video-detail/video-detail.component';
 import {AnimationDetailComponent} from './animations/animation-detail/animation-detail.component';
 import {RealEstatePhotographyDetailComponent} from './real-estate-photography/real-estate-photography-detail/real-estate-photography-detail.component';
-import {FoodPhotographyDetailComponent} from './food-photography/food-photography-detail/food-photography-detail.component'
-import {InstagramDetailComponent} from './instagram/instagram-detail/instagram-detail.component'
+import {FoodPhotographyDetailComponent} from './food-photography/food-photography-detail/food-photography-detail.component';
+import {InstagramDetailComponent} from './instagram/instagram-detail/instagram-detail.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+
+import { AuthService } from './auth.service';
 
 
 const routes: Routes = [
@@ -36,6 +41,9 @@ const routes: Routes = [
   { path: 'instagram', component: InstagramComponent},
   { path: 'instagram/:id', component: InstagramDetailComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'blog', component: BlogComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthService] },
+  { path: 'admin-login', component: AdminLoginComponent}
 
 ];
 

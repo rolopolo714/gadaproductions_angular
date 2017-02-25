@@ -18,8 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InstagramComponent } from './instagram/instagram.component';
 import * as spinner from 'ng2-spin-kit/app/spinners';
 import { AboutComponent } from './about/about.component';
-import {AngularFireModule} from 'angularfire2';
-import {FireBaseConfig} from '../environments/firebase.config';
+import {AngularFireModule, firebaseAuthConfig} from 'angularfire2';
 import { SafeHtmlPipe } from './videos/videos.component';
 import { SafeUrlPipe } from './videos/videos.component';
 import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
@@ -29,10 +28,14 @@ import { InstagramDetailComponent } from './instagram/instagram-detail/instagram
 import { FoodPhotographyDetailComponent } from './food-photography/food-photography-detail/food-photography-detail.component';
 import { ControlMessagesComponent } from './contact/control-messages.component';
 import { MyDatePickerModule } from 'mydatepicker';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { BlogComponent } from './blog/blog.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthService } from './auth.service'
 
+export const FireBaseConfig = {
 
-
-
+}
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { MyDatePickerModule } from 'mydatepicker';
     InstagramDetailComponent,
     FoodPhotographyDetailComponent,
     ControlMessagesComponent,
+    AdminLoginComponent,
+    BlogComponent,
+    AdminComponent,
 
 
   ],
@@ -73,7 +79,7 @@ import { MyDatePickerModule } from 'mydatepicker';
 
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

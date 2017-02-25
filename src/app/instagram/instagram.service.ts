@@ -11,7 +11,7 @@ export class InstagramService {
 
   constructor(private http: Http, private _jsonp: Jsonp) {}
 
-private url = 'https://api.instagram.com/v1/users/1340786566/media/recent?access_token=&callback=JSON_CALLBACK';
+private url = 'https://api.instagram.com/v1/users/1340786566/media/recent?access_token=1340786566.1677ed0.b1fed6c8114c48c68eda18fa6cea09ed&callback=JSON_CALLBACK';
 
     getAllData(){
       // return this._jsonp.get(this.url).map(res => res.json().data);

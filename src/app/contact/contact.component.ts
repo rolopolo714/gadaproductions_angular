@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable,  } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 import { Client } from './client';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -20,10 +20,15 @@ export class ContactComponent implements OnInit {
 
 
 clients: FirebaseListObservable<any[]>;
+
 userForm: any;
+
+
+
 
   constructor(af: AngularFire, private elementRef: ElementRef, private fb: FormBuilder) {
     this.clients = af.database.list('/clients');
+
 
     this.userForm = this.fb.group({
       'name': ['', Validators.required],
@@ -39,13 +44,9 @@ userForm: any;
     data.date = data.date.formatted;
     this.clients.push(data);
     }
-
-
   redirect(){
     location.href = "/home";
   }
-
-
   ngOnInit() {
   }
 
