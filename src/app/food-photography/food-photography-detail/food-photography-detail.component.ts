@@ -21,7 +21,7 @@ export class FoodPhotographyDetailComponent implements OnInit {
     this.route.params.subscribe(params =>{
       let title = params['title'];
       let foodPhotography = this._foodPhotography.getItem(title).subscribe(foodPhotography => this.foodPhotography = foodPhotography)
-    
+
       this.photos = Array(this.foodPhotography.amount)
 
     });

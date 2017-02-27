@@ -22,14 +22,8 @@ export class ContactComponent implements OnInit {
 clients: FirebaseListObservable<any[]>;
 
 userForm: any;
-
-
-
-
   constructor(af: AngularFire, private elementRef: ElementRef, private fb: FormBuilder) {
     this.clients = af.database.list('/clients');
-
-
     this.userForm = this.fb.group({
       'name': ['', Validators.required],
       'email': ['', [Validators.required, ValidationService.emailValidator]],

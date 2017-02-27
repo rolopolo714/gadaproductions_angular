@@ -41,7 +41,7 @@
 
         <label for="address">Address</label>
         <input class="form-control" formControlName="address" id="address" placeholder="enter your address" #address/>
-        <p *ngIf="userForm.controls.address.dirty && userForm.controls.address.invalid" class="ui error message">address is required</p>
+        <!-- <p *ngIf="userForm.controls.address.dirty && userForm.controls.address.invalid" class="ui error message">address is required</p> -->
 
         <label for="states">State</label>
         <select class="form-control" formControlName="state" id="state" #state>

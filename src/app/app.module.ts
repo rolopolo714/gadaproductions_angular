@@ -31,10 +31,11 @@ import { MyDatePickerModule } from 'mydatepicker';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BlogComponent } from './blog/blog.component';
 import { AdminComponent } from './admin/admin.component';
-import { AuthService } from './auth.service'
+import { AuthService } from './auth.service';
+import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component'
 
 export const FireBaseConfig = {
-
+  
 }
 
 @NgModule({
@@ -61,6 +62,7 @@ export const FireBaseConfig = {
     AdminLoginComponent,
     BlogComponent,
     AdminComponent,
+    BlogDetailComponent,
 
 
   ],

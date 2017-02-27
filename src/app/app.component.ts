@@ -9,6 +9,8 @@ export class AppComponent {
 
   selected: number;
 
+message = console.log()
+
     constructor() {
     }
 
